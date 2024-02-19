@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My project</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body::before {
+            content: "";
+            background: url("funnypic.jpg") no-repeat center center/cover;
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            top: 0%;
+            opacity: 0.2;
+        }
+
+        .container {
+            margin-top: 200px;
+            text-align: center;
+
+        }
+
+        #heading1 {
+            color: black;
+            /* background-color: rgb(219, 201, 177); */
+        }
+
+        #jokes {
+            font-size: 2.5rem;
+            margin-top: 50px;
+
+        }
+
+        #btn {
+            text-align: center;
+        }
+
+        button {
+            margin-top: 50px;
+            padding: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        button:hover {
+            background-color: rgb(151, 142, 142);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="heading1">
+            Here are some random jokes
+        </h1>
+
+        <div id="jokes">
+
+
+
+        </div>
+
+        <div id="btn">
+            <button onclick="lick()">Click Here To View and Change </button>
+        </div>
+
+    </div>
+
+    <script>
+
+
+
+        function lick() {
+
+
+            let random_jokes = [
+                ' He said "he ia a programmer and never faced any bug" ',
+                ' The driver which does not drive   =>   Screw Driver  ',
+                ' Who is elder amongst Twins ',
+                'Pakistan has come out from corruption',
+                'Pakistani currency is the best currency in the world',
+            ]
+
+            let random = Math.floor(Math.random()*random_jokes.length)
+            let random1 = random_jokes[random]
+            jokes.innerHTML = random1
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
